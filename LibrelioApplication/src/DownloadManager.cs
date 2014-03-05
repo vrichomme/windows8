@@ -388,7 +388,8 @@ namespace LibrelioApplication
 
             var stream = await file.OpenAsync(FileAccessMode.Read);
 
-            return await UnprotectPDFStream(stream);
+            return stream;
+            //return await UnprotectPDFStream(stream);
         }
 
         public static LibrelioLocalUrl DeleteLocalUrl(LibrelioLocalUrl url)

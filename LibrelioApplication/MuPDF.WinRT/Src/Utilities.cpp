@@ -4,6 +4,11 @@
 
 #include "Utilities.h"
 
+extern "C" char *getenv(const char *varname)
+{
+	return NULL;
+}
+
 Platform::String^ Utilities::ConvertUTF8ToString(char* str)
 {
 	int length = MultiByteToWideChar(
